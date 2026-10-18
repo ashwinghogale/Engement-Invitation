@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Engegement Invitation</title>
+<title>Our Engagement Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -296,6 +295,35 @@ p {
   margin: 20px auto;
 }
 
+/* MUSIC BUTTON */
+.music-button {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  background: var(--rose);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px #a64d5940;
+  display: grid;
+  place-items: center;
+}
+
+.music-button.playing {
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #a64d5966; }
+  70% { box-shadow: 0 0 0 16px #a64d5900; }
+  100% { box-shadow: 0 0 0 0 #a64d5900; }
+}
+
 @media (max-width: 480px) {
   nav {
     gap: 11px;
@@ -324,6 +352,10 @@ p {
   html {
     scroll-behavior: auto;
   }
+
+  .music-button.playing {
+    animation: none;
+  }
 }
 </style>
 </head>
@@ -338,6 +370,14 @@ p {
   <a href="#thanks">Thanks</a>
 </nav>
 
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+<button class="music-button" id="musicButton" aria-label="Play or pause music">♪</button>
+
 <!-- PAGE 1: WELCOME + COUNTDOWN -->
 <section class="hero" id="home">
   <div class="inner">
@@ -350,7 +390,6 @@ p {
 
     <div class="date" id="weddingDateText">
       15 NOVEMBER 2026
-
     </div>
 
     <div class="divider"></div>
@@ -391,7 +430,7 @@ p {
 <section class="timeline" id="timeline">
   <div class="inner">
     <div class="eyebrow">Save the moments</div>
-    <h2>Wedding Timeline</h2>
+    <h2>Engagement Timeline</h2>
     <p>We can't wait to celebrate with you.</p>
 
     <div class="events">
@@ -441,7 +480,7 @@ p {
 
     <p style="margin-top:20px">
       Together with our families,<br>
-      we invite you to celebrate the Engegement of
+      we invite you to celebrate the Engagement of
     </p>
 
     <div class="names">
@@ -475,7 +514,7 @@ p {
     <div class="detail-grid">
       <div class="detail-card">
         <div>▦</div>
-        <h3>Engement Date</h3>
+        <h3>Engagement Date</h3>
         <p id="venueDate">15 November 2026</p>
         <p>Ceremony: 11:30 AM</p>
       </div>
@@ -535,11 +574,48 @@ p {
 </section>
 
 <script>
-/*
-  EDIT YOUR WEDDING DATE HERE.
-  Format: YYYY-MM-DDTHH:MM:SS
-  The time is interpreted in the visitor's local timezone.
-*/
+/* ---------------- MUSIC ---------------- */
+const music = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
+let musicStarted = false;
+
+function startMusic() {
+  music.volume = 0.45;
+  music.play()
+    .then(() => {
+      musicStarted = true;
+      musicButton.classList.add("playing");
+      musicButton.textContent = "❚❚";
+    })
+    .catch(() => {
+      /* Browser blocked autoplay; user can press the music button */
+    });
+}
+
+musicButton.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    musicButton.classList.add("playing");
+    musicButton.textContent = "❚❚";
+  } else {
+    music.pause();
+    musicButton.classList.remove("playing");
+    musicButton.textContent = "♪";
+  }
+});
+
+/* Try to start music after the visitor's first tap or scroll */
+function firstInteraction() {
+  if (!musicStarted) {
+    startMusic();
+  }
+}
+
+document.addEventListener("click", firstInteraction, { once: true });
+document.addEventListener("touchstart", firstInteraction, { once: true });
+document.addEventListener("scroll", firstInteraction, { once: true });
+
+/* ---------------- COUNTDOWN ---------------- */
 const weddingDate = new Date("2026-11-15T11:30:00");
 
 function updateCountdown() {
