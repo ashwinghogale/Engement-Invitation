@@ -1,25 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff5f5">
 <title>Our Engagement Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --cream: #fff8f0;
-  --pink: #e9c6c3;
-  --rose: #a64d59;
-  --gold: #c5a66b;
-  --text: #4a3432;
+  --pink: #f6dfe3;
+  --rose: #a34360;
+  --gold: #c5a568;
+  --cream: #fff9f4;
+  --text: #513740;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -30,7 +32,7 @@ html {
 body {
   background: var(--cream);
   color: var(--text);
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav {
@@ -43,7 +45,7 @@ nav {
   flex-wrap: wrap;
   gap: 18px;
   padding: 15px 8px;
-  background: #fff8f0ed;
+  background: #fff9f4ef;
   backdrop-filter: blur(10px);
 }
 
@@ -60,80 +62,87 @@ section {
   min-height: 100svh;
   padding: 90px 22px 55px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   scroll-snap-align: start;
 }
 
 .inner {
   width: 100%;
-  max-width: 900px;
+  max-width: 850px;
 }
 
 .eyebrow {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 h1, h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: var(--rose);
 }
 
 h1 {
-  font-size: clamp(48px, 11vw, 95px);
-  line-height: 1.05;
+  font-size: clamp(43px, 10vw, 82px);
+  line-height: 1.15;
   margin: 20px 0;
 }
 
 h2 {
-  font-size: clamp(36px, 8vw, 65px);
-  margin: 15px 0;
+  font-size: clamp(38px, 8vw, 65px);
+  margin: 15px 0 25px;
 }
 
 .script {
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(48px, 10vw, 85px);
+  font-family: 'Great Vibes', cursive;
   color: var(--rose);
+  font-weight: 400;
 }
 
 p {
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .hero {
   background:
-    linear-gradient(#fff8f0a8, #fff8f0c7),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85")
+    linear-gradient(#fff5f5bd, #fff5f5d9),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
     center/cover no-repeat;
 }
 
+.flower {
+  font-size: 35px;
+  color: var(--gold);
+  margin: 15px 0;
+}
+
 .monogram {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   margin: 0 auto 25px;
   border: 1px solid var(--gold);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
   color: var(--rose);
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
 }
 
 .date {
-  margin: 20px 0;
+  color: var(--rose);
+  font-size: 12px;
   letter-spacing: 3px;
-  font-size: 13px;
+  margin: 22px 0;
 }
 
 .countdown-title {
-  margin-top: 35px;
-  font-size: 12px;
+  margin-top: 30px;
+  font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -142,22 +151,22 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-top: 18px;
 }
 
 .time-box {
-  width: 82px;
-  padding: 15px 5px;
-  border: 1px solid var(--gold);
-  background: #fff8f0cf;
+  width: 75px;
+  padding: 12px 4px;
+  background: #fff9f4d9;
+  border: 1px solid #d8b77f;
 }
 
 .time-box strong {
   display: block;
+  font-family: 'Playfair Display', serif;
   color: var(--rose);
-  font-family: "Playfair Display", serif;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 400;
 }
 
@@ -170,70 +179,39 @@ p {
 .scroll-link {
   display: inline-block;
   margin-top: 30px;
-  color: var(--rose);
   text-decoration: none;
-  font-size: 11px;
+  color: var(--rose);
+  font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.timeline {
-  background: #fffdf9;
-}
-
-.events {
-  max-width: 550px;
-  margin: 35px auto;
-  text-align: left;
-}
-
-.event {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 25px;
-}
-
-.event-icon {
-  flex: 0 0 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #f3dfdc;
-  color: var(--rose);
-}
-
-.event h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 23px;
-  font-weight: 400;
-  color: var(--rose);
-}
-
-.event p {
-  color: #806e69;
-  font-size: 13px;
-}
-
 .invitation {
-  background: #f2dfdc;
+  background: var(--pink);
 }
 
 .invite-card {
+  padding: 35px 20px;
+  background: #fff9f4c7;
   border: 1px solid var(--gold);
-  outline: 1px solid #d8bd91;
+  outline: 1px solid #d8b77f;
   outline-offset: 7px;
-  padding: 40px 20px;
-  background: #fff8f0a8;
 }
 
+/* UPDATED COUPLE NAME FONT */
 .names {
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(52px, 12vw, 90px);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(55px, 12vw, 95px);
+  font-weight: 500;
   color: var(--rose);
-  line-height: 1.05;
+  line-height: 1.15;
   margin: 25px 0;
+  letter-spacing: 1px;
+}
+
+.ampersand {
+  color: var(--gold);
+  font-size: .8em;
 }
 
 .divider {
@@ -244,27 +222,32 @@ p {
 }
 
 .details {
-  background: #fffdf9;
+  background: var(--cream);
 }
 
 .detail-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  margin: 30px auto;
+  margin: 30px 0;
 }
 
 .detail-card {
   padding: 25px 12px;
-  border: 1px solid #e7d3c8;
-  background: var(--cream);
+  background: #fff2ef;
+  border: 1px solid #ead4ce;
+}
+
+.detail-card .symbol {
+  color: var(--gold);
+  font-size: 27px;
 }
 
 .detail-card h3 {
-  font-family: "Playfair Display", serif;
+  color: var(--rose);
+  font-family: 'Playfair Display', serif;
   font-size: 23px;
   font-weight: 400;
-  color: var(--rose);
   margin: 10px 0;
 }
 
@@ -277,56 +260,48 @@ p {
   display: inline-block;
   background: var(--rose);
   color: white;
-  padding: 14px 22px;
   text-decoration: none;
-  font-size: 12px;
-  margin-top: 10px;
+  padding: 14px 24px;
+  margin-top: 15px;
+  font-size: 11px;
+  letter-spacing: 1px;
 }
 
 .thanks {
   background:
-    linear-gradient(#fff8f0c9, #fff8f0db),
+    linear-gradient(#fff5f5cf, #fff5f5e8),
     url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1500&q=85")
     center/cover no-repeat;
 }
 
-.thanks p {
+.thanks .message {
   max-width: 550px;
   margin: 20px auto;
 }
 
-/* MUSIC BUTTON */
 .music-button {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
   z-index: 20;
-  width: 54px;
-  height: 54px;
-  border: none;
-  border-radius: 50%;
-  background: var(--rose);
-  color: white;
-  font-size: 22px;
+  right: 15px;
+  bottom: 18px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  padding: 12px 16px;
+  background: #fff9f4f2;
+  color: var(--rose);
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
   cursor: pointer;
-  box-shadow: 0 8px 20px #a64d5940;
-  display: grid;
-  place-items: center;
+  box-shadow: 0 3px 15px #57323a1a;
 }
 
-.music-button.playing {
-  animation: pulse 1.6s infinite;
+.music-button:hover {
+  background: var(--pink);
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 #a64d5966; }
-  70% { box-shadow: 0 0 0 16px #a64d5900; }
-  100% { box-shadow: 0 0 0 0 #a64d5900; }
-}
-
-@media (max-width: 480px) {
+@media(max-width: 480px) {
   nav {
-    gap: 11px;
+    gap: 12px;
   }
 
   nav a {
@@ -335,26 +310,25 @@ p {
   }
 
   .time-box {
-    width: 68px;
-    padding: 12px 3px;
+    width: 65px;
   }
 
   .time-box strong {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .detail-grid {
     gap: 8px;
   }
+
+  .detail-card {
+    padding: 20px 7px;
+  }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media(prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .music-button.playing {
-    animation: none;
   }
 }
 </style>
@@ -362,41 +336,42 @@ p {
 
 <body>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#timeline">Timeline</a>
-  <a href="#invite">Invitation</a>
-  <a href="#venue">Venue</a>
-  <a href="#thanks">Thanks</a>
-</nav>
-
 <!-- BACKGROUND MUSIC -->
 <audio id="bgMusic" loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
-  Your browser does not support audio.
 </audio>
 
-<button class="music-button" id="musicButton" aria-label="Play or pause music">♪</button>
+<button class="music-button" id="musicButton" type="button">
+  ♫ Play Music
+</button>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#home">Welcome</a>
+  <a href="#invite">Invitation</a>
+  <a href="#venue">Venue</a>
+  <a href="#thanks">Thank You</a>
+</nav>
 
 <!-- PAGE 1: WELCOME + COUNTDOWN -->
 <section class="hero" id="home">
   <div class="inner">
-    <div class="monogram">A & P</div>
+
+    <div class="monogram">A &amp; P</div>
+
     <div class="eyebrow">Together with our families</div>
 
-    <h1>We're Getting<br>Engaged</h1>
+    <div class="flower">❀</div>
 
-    <p>Two hearts, one beautiful journey.</p>
+    <h1 class="script">We're Getting<br>Engaged</h1>
 
-    <div class="date" id="weddingDateText">
-      15 NOVEMBER 2026
-    </div>
+    <p>Two hearts, one promise, a beautiful beginning.</p>
+
+    <div class="date" id="heroDate">15 NOVEMBER 2026</div>
 
     <div class="divider"></div>
 
-    <div class="countdown-title">
-      Counting down to forever
-    </div>
+    <div class="countdown-title">The countdown to our forever</div>
 
     <div class="countdown" id="countdown">
       <div class="time-box">
@@ -420,245 +395,216 @@ p {
       </div>
     </div>
 
-    <a class="scroll-link" href="#timeline">
-      Scroll to explore ↓
-    </a>
+    <a class="scroll-link" href="#invite">Our invitation ↓</a>
+
   </div>
 </section>
 
-<!-- PAGE 2: TIMELINE -->
-<section class="timeline" id="timeline">
-  <div class="inner">
-    <div class="eyebrow">Save the moments</div>
-    <h2>Engagement Timeline</h2>
-    <p>We can't wait to celebrate with you.</p>
-
-    <div class="events">
-      <div class="event">
-        <div class="event-icon">♡</div>
-        <div>
-          <h3>Welcome & Blessings</h3>
-          <p>11:00 AM — Meet the family and share the joy.</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-icon">✿</div>
-        <div>
-          <h3>Ring Ceremony</h3>
-          <p>11:30 AM — The beginning of our forever.</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-icon">✦</div>
-        <div>
-          <h3>Lunch & Celebration</h3>
-          <p>12:30 PM — Delicious food and happy memories.</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-icon">♡</div>
-        <div>
-          <h3>Photos & Memories</h3>
-          <p>1:30 PM — Let's capture the happiness.</p>
-        </div>
-      </div>
-    </div>
-
-    <a class="scroll-link" href="#invite">
-      Read our invitation ↓
-    </a>
-  </div>
-</section>
-
-<!-- PAGE 3: INVITATION -->
+<!-- PAGE 2: ENGAGEMENT INVITATION -->
 <section class="invitation" id="invite">
   <div class="inner invite-card">
-    <div class="eyebrow">With love and joy</div>
 
-    <p style="margin-top:20px">
-      Together with our families,<br>
-      we invite you to celebrate the Engagement of
+    <div class="eyebrow">With love and blessings</div>
+
+    <div class="flower">❀</div>
+
+    <p>
+      We joyfully invite you to celebrate the engagement of
     </p>
 
     <div class="names">
-      Ashwin<br>&amp;<br>Pragati
+      ASHWIN<br>
+      <span class="ampersand">&amp;</span><br>
+      PRAGATI
     </div>
 
     <div class="divider"></div>
 
     <p>
-      Your presence and blessings will make our
-      special day unforgettable. Join us as we
-      begin a beautiful new chapter together.
+      Two families, two hearts, and one beautiful journey
+      beginning together. Your presence and blessings
+      will make this special occasion unforgettable.
     </p>
 
-    <div class="date" id="inviteDate">
-      15 NOVEMBER 2026
-    </div>
+    <div class="date" id="inviteDate">15 NOVEMBER 2026</div>
 
-    <a class="scroll-link" href="#venue">
-      Venue and timings ↓
-    </a>
+    <a class="scroll-link" href="#venue">Date &amp; location ↓</a>
+
   </div>
 </section>
 
-<!-- PAGE 4: VENUE -->
+<!-- PAGE 3: DATE, TIME & VENUE -->
 <section class="details" id="venue">
   <div class="inner">
-    <div class="eyebrow">We look forward to seeing you</div>
-    <h2>When & Where</h2>
+
+    <div class="eyebrow">Please join our celebration</div>
+
+    <h2>When &amp; Where</h2>
+
+    <div class="flower">❀</div>
 
     <div class="detail-grid">
+
       <div class="detail-card">
-        <div>▦</div>
-        <h3>Engagement Date</h3>
+        <div class="symbol">▦</div>
+        <h3>The Date</h3>
         <p id="venueDate">15 November 2026</p>
-        <p>Ceremony: 11:30 AM</p>
       </div>
 
       <div class="detail-card">
-        <div>⌖</div>
-        <h3>Venue</h3>
-        <p>Vinkar Sabhagruh, Satara Road</p>
-        <p>Pune, Maharashtra</p>
+        <div class="symbol">◷</div>
+        <h3>The Time</h3>
+        <p>Engagement Ceremony</p>
+        <p>11:00 AM onwards</p>
       </div>
+
+      <div class="detail-card" style="grid-column:1 / -1">
+        <div class="symbol">⌖</div>
+        <h3>The Venue</h3>
+        <p>Vinkar Sabhagruh, Satara Road</p>
+        <p>Pune, Maharashtra, India</p>
+      </div>
+
     </div>
 
     <a class="button"
-       href="https://maps.app.goo.gl/PbrvhVMwM7LYNtob8"
+       href="https://maps.app.goo.gl/pHftDb2nY7HfGr8H9"
        target="_blank"
        rel="noopener noreferrer">
-      Open Location in Google Maps ↗
+      OPEN LOCATION IN GOOGLE MAPS ↗
     </a>
 
     <p style="margin-top:25px">
-      Your presence is the greatest gift.
+      We can't wait to celebrate this special moment with you.
     </p>
 
-    <a class="scroll-link" href="#thanks">
-      A message for you ↓
-    </a>
+    <a class="scroll-link" href="#thanks">A message for you ↓</a>
+
   </div>
 </section>
 
-<!-- PAGE 5: THANK YOU -->
+<!-- PAGE 4: THANK YOU -->
 <section class="thanks" id="thanks">
   <div class="inner">
+
     <div class="eyebrow">With heartfelt gratitude</div>
 
     <h2 class="script">Thank You</h2>
 
-    <div class="divider"></div>
+    <div class="flower">♡</div>
 
-    <p>
-      Thank you for being a part of our story.
-      Your love, blessings and presence mean the world
-      to us. We look forward to celebrating this
-      beautiful beginning with you.
+    <p class="message">
+      Thank you for being part of our happiness.
+      Your love, blessings, and presence mean so much to us.
+      We look forward to celebrating this beautiful new
+      beginning with you.
     </p>
 
+    <div class="divider"></div>
+
+    <!-- SAME UPDATED COUPLE NAME FONT -->
     <div class="names" style="font-size:55px">
       With Love,<br>
-      Ashwin & Pragati
+      Ashwin &amp; Pragati
     </div>
 
-    <p>Forever starts here ♡</p>
+    <p>Two hearts. One forever. ♡</p>
 
-    <a class="scroll-link" href="#home">
-      ↑ Back to the beginning
-    </a>
+    <a class="scroll-link" href="#home">↑ Back to the beginning</a>
+
   </div>
 </section>
 
 <script>
-/* ---------------- MUSIC ---------------- */
-const music = document.getElementById("bgMusic");
-const musicButton = document.getElementById("musicButton");
-let musicStarted = false;
+// ENGAGEMENT DATE AND TIME
+// Format: YYYY-MM-DDTHH:MM:SS
+// 29 November 2026 at 6:00 PM.
+const engagementDate = new Date("2026-11-15T11:30:00");
 
-function startMusic() {
-  music.volume = 0.45;
-  music.play()
-    .then(() => {
-      musicStarted = true;
-      musicButton.classList.add("playing");
-      musicButton.textContent = "❚❚";
-    })
-    .catch(() => {
-      /* Browser blocked autoplay; user can press the music button */
-    });
-}
-
-musicButton.addEventListener("click", () => {
-  if (music.paused) {
-    music.play();
-    musicButton.classList.add("playing");
-    musicButton.textContent = "❚❚";
-  } else {
-    music.pause();
-    musicButton.classList.remove("playing");
-    musicButton.textContent = "♪";
-  }
-});
-
-/* Try to start music after the visitor's first tap or scroll */
-function firstInteraction() {
-  if (!musicStarted) {
-    startMusic();
-  }
-}
-
-document.addEventListener("click", firstInteraction, { once: true });
-document.addEventListener("touchstart", firstInteraction, { once: true });
-document.addEventListener("scroll", firstInteraction, { once: true });
-
-/* ---------------- COUNTDOWN ---------------- */
-const weddingDate = new Date("2026-11-15T11:30:00");
-
-function updateCountdown() {
-  const now = new Date();
-  const difference = weddingDate.getTime() - now.getTime();
-
-  if (difference <= 0) {
-    document.getElementById("countdown").innerHTML =
-      "<p>Today is the special day! ♡</p>";
-    return;
-  }
-
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((difference / (1000 * 60)) % 60);
-  const seconds = Math.floor((difference / 1000) % 60);
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent =
-    String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent =
-    String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent =
-    String(seconds).padStart(2, "0");
-}
-
-function formatWeddingDate(date) {
+function formatDate(date) {
   return date.toLocaleDateString("en-IN", {
-    day: "2-digit",
+    day: "numeric",
     month: "long",
     year: "numeric"
   });
 }
 
-const formattedDate = formatWeddingDate(weddingDate);
-document.getElementById("weddingDateText").textContent =
+const formattedDate = formatDate(engagementDate);
+
+document.getElementById("heroDate").textContent =
   formattedDate.toUpperCase();
+
 document.getElementById("inviteDate").textContent =
   formattedDate.toUpperCase();
-document.getElementById("venueDate").textContent = formattedDate;
+
+document.getElementById("venueDate").textContent =
+  formattedDate;
+
+function updateCountdown() {
+  const now = new Date();
+  const difference = engagementDate.getTime() - now.getTime();
+
+  if (difference <= 0) {
+    document.getElementById("countdown").innerHTML =
+      "<p>Our special day is here! ♡</p>";
+    return;
+  }
+
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor((difference / 3600000) % 24);
+  const minutes = Math.floor((difference / 60000) % 60);
+  const seconds = Math.floor((difference / 1000) % 60);
+
+  document.getElementById("days").textContent = days;
+
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2, "0");
+
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2, "0");
+
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2, "0");
+}
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// BACKGROUND MUSIC
+const music = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
+
+function updateMusicButton() {
+  musicButton.textContent = music.paused
+    ? "♫ Play Music"
+    : "♫ Pause Music";
+}
+
+async function playMusic() {
+  try {
+    await music.play();
+    updateMusicButton();
+  } catch (error) {
+    updateMusicButton();
+  }
+}
+
+musicButton.addEventListener("click", async () => {
+  if (music.paused) {
+    await playMusic();
+  } else {
+    music.pause();
+    updateMusicButton();
+  }
+});
+
+music.addEventListener("play", updateMusicButton);
+music.addEventListener("pause", updateMusicButton);
+
+// Browsers may block autoplay until the visitor interacts.
+window.addEventListener("load", () => {
+  playMusic();
+});
 </script>
 
 </body>
