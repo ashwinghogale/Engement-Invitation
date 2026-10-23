@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#fff5f5">
-<title>Our Engagement Invitation</title>
+<title>Ashwin & Pragati | Engagement Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -186,11 +186,65 @@ p {
   text-transform: uppercase;
 }
 
+/* SECOND PAGE: INVITATION + FALLING PETALS */
 .invitation {
   background: var(--pink);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.petal-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.petal {
+  position: absolute;
+  top: -35px;
+  display: block;
+  width: var(--petal-size, 13px);
+  height: calc(var(--petal-size, 13px) * 1.55);
+  border-radius: 80% 10% 75% 20%;
+  background: linear-gradient(
+    145deg,
+    #fff7f5 0%,
+    #e8a9b8 55%,
+    #c96f8a 100%
+  );
+  opacity: var(--petal-opacity, 0.75);
+  transform: rotate(var(--start-rotation, 0deg));
+  animation: petal-fall var(--fall-duration, 9s)
+    linear var(--fall-delay, 0s) infinite;
+  will-change: transform, top;
+}
+
+@keyframes petal-fall {
+  0% {
+    top: -35px;
+    transform: translateX(0) rotate(var(--start-rotation, 0deg));
+  }
+  25% {
+    transform: translateX(24px) rotate(100deg);
+  }
+  50% {
+    transform: translateX(-18px) rotate(210deg);
+  }
+  75% {
+    transform: translateX(22px) rotate(300deg);
+  }
+  100% {
+    top: 105%;
+    transform: translateX(-12px) rotate(420deg);
+  }
 }
 
 .invite-card {
+  position: relative;
+  z-index: 1;
   padding: 35px 20px;
   background: #fff9f4c7;
   border: 1px solid var(--gold);
@@ -198,7 +252,7 @@ p {
   outline-offset: 7px;
 }
 
-/* UPDATED COUPLE NAME FONT */
+/* COUPLE NAME FONT */
 .names {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(55px, 12vw, 95px);
@@ -330,6 +384,11 @@ p {
   html {
     scroll-behavior: auto;
   }
+
+  .petal {
+    animation: none;
+    display: none;
+  }
 }
 </style>
 </head>
@@ -356,11 +415,8 @@ p {
 <!-- PAGE 1: WELCOME + COUNTDOWN -->
 <section class="hero" id="home">
   <div class="inner">
-
     <div class="monogram">A &amp; P</div>
-
     <div class="eyebrow">Together with our families</div>
-
     <div class="flower">❀</div>
 
     <h1 class="script">We're Getting<br>Engaged</h1>
@@ -378,17 +434,14 @@ p {
         <strong id="days">--</strong>
         <span>Days</span>
       </div>
-
       <div class="time-box">
         <strong id="hours">--</strong>
         <span>Hours</span>
       </div>
-
       <div class="time-box">
         <strong id="minutes">--</strong>
         <span>Minutes</span>
       </div>
-
       <div class="time-box">
         <strong id="seconds">--</strong>
         <span>Seconds</span>
@@ -396,21 +449,18 @@ p {
     </div>
 
     <a class="scroll-link" href="#invite">Our invitation ↓</a>
-
   </div>
 </section>
 
 <!-- PAGE 2: ENGAGEMENT INVITATION -->
 <section class="invitation" id="invite">
+  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+
   <div class="inner invite-card">
-
     <div class="eyebrow">With love and blessings</div>
-
     <div class="flower">❀</div>
 
-    <p>
-      We joyfully invite you to celebrate the engagement of
-    </p>
+    <p>We joyfully invite you to celebrate the engagement of</p>
 
     <div class="names">
       ASHWIN<br>
@@ -429,22 +479,17 @@ p {
     <div class="date" id="inviteDate">15 NOVEMBER 2026</div>
 
     <a class="scroll-link" href="#venue">Date &amp; location ↓</a>
-
   </div>
 </section>
 
 <!-- PAGE 3: DATE, TIME & VENUE -->
 <section class="details" id="venue">
   <div class="inner">
-
     <div class="eyebrow">Please join our celebration</div>
-
     <h2>When &amp; Where</h2>
-
     <div class="flower">❀</div>
 
     <div class="detail-grid">
-
       <div class="detail-card">
         <div class="symbol">▦</div>
         <h3>The Date</h3>
@@ -464,7 +509,6 @@ p {
         <p>Vinkar Sabhagruh, Satara Road</p>
         <p>Pune, Maharashtra, India</p>
       </div>
-
     </div>
 
     <a class="button"
@@ -479,18 +523,14 @@ p {
     </p>
 
     <a class="scroll-link" href="#thanks">A message for you ↓</a>
-
   </div>
 </section>
 
 <!-- PAGE 4: THANK YOU -->
 <section class="thanks" id="thanks">
   <div class="inner">
-
     <div class="eyebrow">With heartfelt gratitude</div>
-
     <h2 class="script">Thank You</h2>
-
     <div class="flower">♡</div>
 
     <p class="message">
@@ -502,7 +542,6 @@ p {
 
     <div class="divider"></div>
 
-    <!-- SAME UPDATED COUPLE NAME FONT -->
     <div class="names" style="font-size:55px">
       With Love,<br>
       Ashwin &amp; Pragati
@@ -511,14 +550,13 @@ p {
     <p>Two hearts. One forever. ♡</p>
 
     <a class="scroll-link" href="#home">↑ Back to the beginning</a>
-
   </div>
 </section>
 
 <script>
 // ENGAGEMENT DATE AND TIME
-// Format: YYYY-MM-DDTHH:MM:SS
-// 29 November 2026 at 6:00 PM.
+// Update this date/time if your ceremony schedule changes.
+// JavaScript date format: YYYY-MM-DDTHH:MM:SS
 const engagementDate = new Date("2026-11-15T11:30:00");
 
 function formatDate(date) {
@@ -556,19 +594,32 @@ function updateCountdown() {
   const seconds = Math.floor((difference / 1000) % 60);
 
   document.getElementById("days").textContent = days;
-
   document.getElementById("hours").textContent =
     String(hours).padStart(2, "0");
-
   document.getElementById("minutes").textContent =
     String(minutes).padStart(2, "0");
-
   document.getElementById("seconds").textContent =
     String(seconds).padStart(2, "0");
 }
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// FALLING PETALS ON THE INVITATION PAGE ONLY
+const petalLayer = document.getElementById("petalLayer");
+const petalCount = 28;
+
+for (let i = 0; i < petalCount; i++) {
+  const petal = document.createElement("span");
+  petal.className = "petal";
+  petal.style.left = `${Math.random() * 100}%`;
+  petal.style.setProperty("--petal-size", `${8 + Math.random() * 10}px`);
+  petal.style.setProperty("--petal-opacity", `${0.35 + Math.random() * 0.5}`);
+  petal.style.setProperty("--fall-duration", `${7 + Math.random() * 8}s`);
+  petal.style.setProperty("--fall-delay", `${-Math.random() * 15}s`);
+  petal.style.setProperty("--start-rotation", `${Math.random() * 360}deg`);
+  petalLayer.appendChild(petal);
+}
 
 // BACKGROUND MUSIC
 const music = document.getElementById("bgMusic");
