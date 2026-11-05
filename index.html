@@ -186,7 +186,8 @@ p {
   text-transform: uppercase;
 }
 
-/* SECOND PAGE: INVITATION + FALLING PETALS */
+/* INVITATION PAGE + FALLING PETALS */
+
 .invitation {
   background: var(--pink);
   position: relative;
@@ -253,6 +254,7 @@ p {
 }
 
 /* COUPLE NAME FONT */
+
 .names {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(55px, 12vw, 95px);
@@ -275,6 +277,8 @@ p {
   margin: 25px auto;
 }
 
+/* DATE AND VENUE PAGE */
+
 .details {
   background: var(--cream);
 }
@@ -287,27 +291,45 @@ p {
 }
 
 .detail-card {
-  padding: 25px 12px;
-  background: #fff2ef;
-  border: 1px solid #ead4ce;
+  padding: 30px 16px;
+  background: linear-gradient(145deg, #fffaf7, #ffece9);
+  border: 1px solid #d9b982;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px #8b526014;
 }
 
 .detail-card .symbol {
   color: var(--gold);
-  font-size: 27px;
+  font-size: 34px;
 }
 
 .detail-card h3 {
   color: var(--rose);
   font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  font-weight: 400;
-  margin: 10px 0;
+  font-size: 27px;
+  font-weight: 500;
+  margin: 12px 0;
 }
 
 .detail-card p {
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 1.8;
   overflow-wrap: anywhere;
+}
+
+.detail-card .detail-value {
+  color: #513740;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3.5vw, 29px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.detail-card .detail-subvalue {
+  color: #76515c;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
 .button {
@@ -321,6 +343,8 @@ p {
   letter-spacing: 1px;
 }
 
+/* THANK YOU PAGE */
+
 .thanks {
   background:
     linear-gradient(#fff5f5cf, #fff5f5e8),
@@ -332,6 +356,21 @@ p {
   max-width: 550px;
   margin: 20px auto;
 }
+
+.family-regards {
+  margin-top: 22px;
+  color: var(--rose);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(25px, 5vw, 34px);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.family-regards strong {
+  font-weight: 600;
+}
+
+/* MUSIC BUTTON */
 
 .music-button {
   position: fixed;
@@ -352,6 +391,8 @@ p {
 .music-button:hover {
   background: var(--pink);
 }
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width: 480px) {
   nav {
@@ -376,7 +417,19 @@ p {
   }
 
   .detail-card {
-    padding: 20px 7px;
+    padding: 22px 10px;
+  }
+
+  .detail-card h3 {
+    font-size: 23px;
+  }
+
+  .detail-card .detail-value {
+    font-size: 22px;
+  }
+
+  .detail-card .detail-subvalue {
+    font-size: 14px;
   }
 }
 
@@ -396,6 +449,7 @@ p {
 <body>
 
 <!-- BACKGROUND MUSIC -->
+
 <audio id="bgMusic" loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -405,6 +459,7 @@ p {
 </button>
 
 <!-- NAVIGATION -->
+
 <nav>
   <a href="#home">Welcome</a>
   <a href="#invite">Invitation</a>
@@ -413,8 +468,10 @@ p {
 </nav>
 
 <!-- PAGE 1: WELCOME + COUNTDOWN -->
+
 <section class="hero" id="home">
   <div class="inner">
+
     <div class="monogram">A &amp; P</div>
     <div class="eyebrow">Together with our families</div>
     <div class="flower">❀</div>
@@ -434,14 +491,17 @@ p {
         <strong id="days">--</strong>
         <span>Days</span>
       </div>
+
       <div class="time-box">
         <strong id="hours">--</strong>
         <span>Hours</span>
       </div>
+
       <div class="time-box">
         <strong id="minutes">--</strong>
         <span>Minutes</span>
       </div>
+
       <div class="time-box">
         <strong id="seconds">--</strong>
         <span>Seconds</span>
@@ -449,14 +509,18 @@ p {
     </div>
 
     <a class="scroll-link" href="#invite">Our invitation ↓</a>
+
   </div>
 </section>
 
 <!-- PAGE 2: ENGAGEMENT INVITATION -->
+
 <section class="invitation" id="invite">
+
   <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
 
   <div class="inner invite-card">
+
     <div class="eyebrow">With love and blessings</div>
     <div class="flower">❀</div>
 
@@ -479,36 +543,44 @@ p {
     <div class="date" id="inviteDate">15 NOVEMBER 2026</div>
 
     <a class="scroll-link" href="#venue">Date &amp; location ↓</a>
+
   </div>
 </section>
 
 <!-- PAGE 3: DATE, TIME & VENUE -->
+
 <section class="details" id="venue">
+
   <div class="inner">
+
     <div class="eyebrow">Please join our celebration</div>
+
     <h2>When &amp; Where</h2>
+
     <div class="flower">❀</div>
 
     <div class="detail-grid">
+
       <div class="detail-card">
         <div class="symbol">▦</div>
         <h3>The Date</h3>
-        <p id="venueDate">15 November 2026</p>
+        <p class="detail-value" id="venueDate">15 November 2026</p>
       </div>
 
       <div class="detail-card">
         <div class="symbol">◷</div>
         <h3>The Time</h3>
-        <p>Engagement Ceremony</p>
-        <p>11:00 AM onwards</p>
+        <p class="detail-subvalue">Engagement Ceremony</p>
+        <p class="detail-value">11:00 AM onwards</p>
       </div>
 
       <div class="detail-card" style="grid-column:1 / -1">
         <div class="symbol">⌖</div>
         <h3>The Venue</h3>
-        <p>Vinkar Sabhagruh, Satara Road</p>
-        <p>Pune, Maharashtra, India</p>
+        <p class="detail-value">Vinkar Sabhagruh, Satara Road</p>
+        <p class="detail-subvalue">Pune, Maharashtra, India</p>
       </div>
+
     </div>
 
     <a class="button"
@@ -522,15 +594,23 @@ p {
       We can't wait to celebrate this special moment with you.
     </p>
 
-    <a class="scroll-link" href="#thanks">A message for you ↓</a>
+    <a class="scroll-link" href="#thanks">
+      A message for you ↓
+    </a>
+
   </div>
 </section>
 
 <!-- PAGE 4: THANK YOU -->
+
 <section class="thanks" id="thanks">
+
   <div class="inner">
+
     <div class="eyebrow">With heartfelt gratitude</div>
+
     <h2 class="script">Thank You</h2>
+
     <div class="flower">♡</div>
 
     <p class="message">
@@ -549,15 +629,23 @@ p {
 
     <p>Two hearts. One forever. ♡</p>
 
-    <a class="scroll-link" href="#home">↑ Back to the beginning</a>
+    <p class="family-regards">
+      Regards,<br>
+      <strong>Ghogale Family</strong>
+    </p>
+
+    <a class="scroll-link" href="#home">
+      ↑ Back to the beginning
+    </a>
+
   </div>
 </section>
 
 <script>
+
 // ENGAGEMENT DATE AND TIME
-// Update this date/time if your ceremony schedule changes.
-// JavaScript date format: YYYY-MM-DDTHH:MM:SS
-const engagementDate = new Date("2026-11-15T11:30:00");
+// Countdown target: 15 November 2026, 11:00 AM
+const engagementDate = new Date("2026-11-15T11:00:00");
 
 function formatDate(date) {
   return date.toLocaleDateString("en-IN", {
@@ -578,84 +666,151 @@ document.getElementById("inviteDate").textContent =
 document.getElementById("venueDate").textContent =
   formattedDate;
 
+
+// COUNTDOWN
+
 function updateCountdown() {
+
   const now = new Date();
-  const difference = engagementDate.getTime() - now.getTime();
+
+  const difference =
+    engagementDate.getTime() - now.getTime();
 
   if (difference <= 0) {
+
     document.getElementById("countdown").innerHTML =
       "<p>Our special day is here! ♡</p>";
+
     return;
   }
 
   const days = Math.floor(difference / 86400000);
-  const hours = Math.floor((difference / 3600000) % 24);
-  const minutes = Math.floor((difference / 60000) % 60);
-  const seconds = Math.floor((difference / 1000) % 60);
+
+  const hours =
+    Math.floor((difference / 3600000) % 24);
+
+  const minutes =
+    Math.floor((difference / 60000) % 60);
+
+  const seconds =
+    Math.floor((difference / 1000) % 60);
 
   document.getElementById("days").textContent = days;
+
   document.getElementById("hours").textContent =
     String(hours).padStart(2, "0");
+
   document.getElementById("minutes").textContent =
     String(minutes).padStart(2, "0");
+
   document.getElementById("seconds").textContent =
     String(seconds).padStart(2, "0");
 }
 
 updateCountdown();
+
 setInterval(updateCountdown, 1000);
 
-// FALLING PETALS ON THE INVITATION PAGE ONLY
+
+// FALLING PETALS ON INVITATION PAGE ONLY
+
 const petalLayer = document.getElementById("petalLayer");
+
 const petalCount = 28;
 
 for (let i = 0; i < petalCount; i++) {
+
   const petal = document.createElement("span");
+
   petal.className = "petal";
+
   petal.style.left = `${Math.random() * 100}%`;
-  petal.style.setProperty("--petal-size", `${8 + Math.random() * 10}px`);
-  petal.style.setProperty("--petal-opacity", `${0.35 + Math.random() * 0.5}`);
-  petal.style.setProperty("--fall-duration", `${7 + Math.random() * 8}s`);
-  petal.style.setProperty("--fall-delay", `${-Math.random() * 15}s`);
-  petal.style.setProperty("--start-rotation", `${Math.random() * 360}deg`);
+
+  petal.style.setProperty(
+    "--petal-size",
+    `${8 + Math.random() * 10}px`
+  );
+
+  petal.style.setProperty(
+    "--petal-opacity",
+    `${0.35 + Math.random() * 0.5}`
+  );
+
+  petal.style.setProperty(
+    "--fall-duration",
+    `${7 + Math.random() * 8}s`
+  );
+
+  petal.style.setProperty(
+    "--fall-delay",
+    `${-Math.random() * 15}s`
+  );
+
+  petal.style.setProperty(
+    "--start-rotation",
+    `${Math.random() * 360}deg`
+  );
+
   petalLayer.appendChild(petal);
 }
 
+
 // BACKGROUND MUSIC
+
 const music = document.getElementById("bgMusic");
+
 const musicButton = document.getElementById("musicButton");
 
 function updateMusicButton() {
+
   musicButton.textContent = music.paused
     ? "♫ Play Music"
     : "♫ Pause Music";
+
 }
 
 async function playMusic() {
+
   try {
+
     await music.play();
+
     updateMusicButton();
+
   } catch (error) {
+
     updateMusicButton();
+
   }
 }
 
 musicButton.addEventListener("click", async () => {
+
   if (music.paused) {
+
     await playMusic();
+
   } else {
+
     music.pause();
+
     updateMusicButton();
+
   }
+
 });
 
 music.addEventListener("play", updateMusicButton);
+
 music.addEventListener("pause", updateMusicButton);
 
-// Browsers may block autoplay until the visitor interacts.
+
+// BROWSERS MAY BLOCK AUTOPLAY UNTIL USER INTERACTION
+
 window.addEventListener("load", () => {
   playMusic();
 });
+
 </script>
 
 </body>
