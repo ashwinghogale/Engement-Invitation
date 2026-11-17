@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#fff5f5">
-<title>Ashwin & Pragati | Engagement Invitation</title>
+
+<title>Ashwin & Pragati | Thank You</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -43,7 +44,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 20px;
   padding: 15px 8px;
   background: #fff9f4ef;
   backdrop-filter: blur(10px);
@@ -107,13 +108,6 @@ p {
   line-height: 1.9;
 }
 
-.hero {
-  background:
-    linear-gradient(#fff5f5bd, #fff5f5d9),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
-    center/cover no-repeat;
-}
-
 .flower {
   font-size: 35px;
   color: var(--gold);
@@ -135,53 +129,24 @@ p {
 
 .date {
   color: var(--rose);
-  font-size: 12px;
-  letter-spacing: 3px;
-  margin: 22px 0;
-}
-
-/* LARGER DATE ON THE FIRST PAGE */
-.hero .date {
-  font-size: clamp(17px, 3.2vw, 23px);
-  font-weight: 600;
-  letter-spacing: 2.5px;
+  font-size: 19px;
+  letter-spacing: 2px;
   margin: 25px 0;
+  font-weight: 600;
 }
 
-.countdown-title {
-  margin-top: 30px;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.countdown {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.time-box {
+.divider {
   width: 75px;
-  padding: 12px 4px;
-  background: #fff9f4d9;
-  border: 1px solid #d8b77f;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px auto;
 }
 
-.time-box strong {
-  display: block;
-  font-family: 'Playfair Display', serif;
-  color: var(--rose);
-  font-size: 27px;
-  font-weight: 400;
-}
-
-.time-box span {
-  font-size: 9px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.hero {
+  background:
+    linear-gradient(#fff5f5bd, #fff5f5e5),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
 }
 
 .scroll-link {
@@ -194,8 +159,9 @@ p {
   text-transform: uppercase;
 }
 
-/* SECOND PAGE: INVITATION + FALLING PETALS */
-.invitation {
+/* THANK YOU PAGE */
+
+.thankyou {
   background: var(--pink);
   position: relative;
   overflow: hidden;
@@ -213,7 +179,6 @@ p {
 .petal {
   position: absolute;
   top: -35px;
-  display: block;
   width: var(--petal-size, 13px);
   height: calc(var(--petal-size, 13px) * 1.55);
   border-radius: 80% 10% 75% 20%;
@@ -224,7 +189,6 @@ p {
     #c96f8a 100%
   );
   opacity: var(--petal-opacity, 0.75);
-  transform: rotate(var(--start-rotation, 0deg));
   animation: petal-fall var(--fall-duration, 9s)
     linear var(--fall-delay, 0s) infinite;
   will-change: transform, top;
@@ -233,7 +197,7 @@ p {
 @keyframes petal-fall {
   0% {
     top: -35px;
-    transform: translateX(0) rotate(var(--start-rotation, 0deg));
+    transform: translateX(0) rotate(0deg);
   }
   25% {
     transform: translateX(24px) rotate(100deg);
@@ -250,17 +214,16 @@ p {
   }
 }
 
-.invite-card {
+.thank-card {
   position: relative;
   z-index: 1;
-  padding: 35px 20px;
-  background: #fff9f4c7;
+  padding: 40px 25px;
+  background: #fff9f4d9;
   border: 1px solid var(--gold);
   outline: 1px solid #d8b77f;
   outline-offset: 7px;
 }
 
-/* COUPLE NAME FONT */
 .names {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(55px, 12vw, 95px);
@@ -276,139 +239,63 @@ p {
   font-size: .8em;
 }
 
-.divider {
-  width: 75px;
-  height: 1px;
-  background: var(--gold);
-  margin: 25px auto;
-}
+/* MEMORIES PAGE */
 
-.details {
+.memories {
   background: var(--cream);
 }
 
-.detail-grid {
+.gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin: 30px 0;
 }
 
-.detail-card {
-  padding: 25px 12px;
-  background: #fff2ef;
-  border: 1px solid #ead4ce;
+.gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border: 5px solid white;
+  outline: 1px solid #ead4ce;
+  box-shadow: 0 5px 15px #57323a15;
+  transition: transform .3s ease;
 }
 
-.detail-card .symbol {
-  color: var(--gold);
-  font-size: 27px;
+.gallery img:hover {
+  transform: scale(1.03);
 }
 
-.detail-card h3 {
-  color: var(--rose);
-  font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  font-weight: 400;
-  margin: 10px 0;
-}
+/* FAMILY THANK YOU */
 
-.detail-card p {
-  font-size: 13px;
-  overflow-wrap: anywhere;
-}
-
-/* DATE AND TIME FONT STYLE */
-.detail-card .detail-value {
-  color: #a34360;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(21px, 3.5vw, 28px);
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
-  font-variant-numeric: lining-nums;
-  margin-top: 8px;
-}
-
-/* VENUE FONT STYLE */
-.detail-card .venue-name {
-  color: #a34360;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 27px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  line-height: 1.4;
-  margin-top: 8px;
-}
-
-.detail-card .venue-location {
-  color: #76515c;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  line-height: 1.5;
-}
-
-.button {
-  display: inline-block;
-  background: var(--rose);
-  color: white;
-  text-decoration: none;
-  padding: 14px 24px;
-  margin-top: 15px;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
-.thanks {
+.family {
   background:
     linear-gradient(#fff5f5cf, #fff5f5e8),
     url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1500&q=85")
     center/cover no-repeat;
 }
 
-.thanks .message {
-  max-width: 550px;
+.message {
+  max-width: 600px;
   margin: 20px auto;
   font-size: 16px;
 }
 
-/* FAMILY SIGN-OFF */
 .family-regards {
   margin: 22px 0 0;
   color: #76515c;
   font-family: 'Playfair Display', serif;
   font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-}
-
-/* GHOGALE FAMILY: MATCH THE 15 NOVEMBER DATE TYPOGRAPHY */
-.normal-ampersand {
-  font-family: Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
 }
 
 .family-signoff {
   display: inline-block;
   margin: 24px auto 8px;
-  padding: 8px 12px;
-  color: #a34360;
+  color: var(--rose);
   font-family: 'Playfair Display', serif;
   font-size: clamp(25px, 4.5vw, 32px);
   font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
-  font-variant-numeric: lining-nums;
-}
-
-@media (max-width: 480px) {
-  .family-signoff {
-    font-size: 25px;
-    padding: 8px 6px;
-  }
+  line-height: 1.5;
 }
 
 .music-button {
@@ -438,35 +325,18 @@ p {
 
   nav a {
     font-size: 9px;
-    letter-spacing: 0;
   }
 
-  .time-box {
-    width: 65px;
-  }
-
-  .time-box strong {
-    font-size: 23px;
-  }
-
-  .detail-grid {
+  .gallery {
     gap: 8px;
   }
 
-  .detail-card {
-    padding: 20px 7px;
+  .gallery img {
+    height: 160px;
   }
 
-  .detail-card .detail-value {
-    font-size: 22px;
-  }
-
-  .detail-card .venue-name {
-    font-size: 23px;
-  }
-
-  .detail-card .venue-location {
-    font-size: 19px;
+  .thank-card {
+    padding: 35px 15px;
   }
 }
 
@@ -490,67 +360,31 @@ p {
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button class="music-button" id="musicButton" type="button">
+<button class="music-button" id="musicButton">
   ♫ Play Music
 </button>
 
 <!-- NAVIGATION -->
 <nav>
   <a href="#home">Welcome</a>
-  <a href="#invite">Invitation</a>
-  <a href="#venue">Venue</a>
   <a href="#thanks">Thank You</a>
+  <a href="#memories">Memories</a>
+  <a href="#family">Our Family</a>
 </nav>
 
-<!-- PAGE 1: WELCOME + COUNTDOWN -->
+<!-- PAGE 1: WELCOME -->
 <section class="hero" id="home">
   <div class="inner">
+
     <div class="monogram">A &amp; P</div>
-    <div class="eyebrow">Together with our families</div>
+
+    <div class="eyebrow">A Beautiful Celebration</div>
+
     <div class="flower">❀</div>
 
-    <h1 class="script">We're Getting<br>Engaged</h1>
-
-    <p>Two hearts, one promise, a beautiful beginning.</p>
-
-    <div class="date" id="heroDate">15th NOVEMBER 2026</div>
-
-    <div class="divider"></div>
-
-    <div class="countdown-title">The countdown to our forever</div>
-
-    <div class="countdown" id="countdown">
-      <div class="time-box">
-        <strong id="days">--</strong>
-        <span>Days</span>
-      </div>
-      <div class="time-box">
-        <strong id="hours">--</strong>
-        <span>Hours</span>
-      </div>
-      <div class="time-box">
-        <strong id="minutes">--</strong>
-        <span>Minutes</span>
-      </div>
-      <div class="time-box">
-        <strong id="seconds">--</strong>
-        <span>Seconds</span>
-      </div>
-    </div>
-
-    <a class="scroll-link" href="#invite">Our invitation ↓</a>
-  </div>
-</section>
-
-<!-- PAGE 2: ENGAGEMENT INVITATION -->
-<section class="invitation" id="invite">
-  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
-
-  <div class="inner invite-card">
-    <div class="eyebrow">With love and blessings</div>
-    <div class="flower">❀</div>
-
-    <p>We joyfully invite you to celebrate the engagement of</p>
+    <h1 class="script">
+      A Day Filled With<br>Love &amp; Happiness
+    </h1>
 
     <div class="names">
       ASHWIN<br>
@@ -558,81 +392,140 @@ p {
       PRAGATI
     </div>
 
+    <div class="date">15 NOVEMBER 2026</div>
+
     <div class="divider"></div>
 
     <p>
-      Two families, two hearts, and one beautiful journey
-      beginning together. Your presence and blessings
-      will make this special occasion unforgettable.
+      Thank you for being part of our beautiful
+      engagement celebration.
     </p>
 
-    <div class="date" id="inviteDate">15 NOVEMBER 2026</div>
+    <a class="scroll-link" href="#thanks">
+      A Special Message ↓
+    </a>
 
-    <a class="scroll-link" href="#venue">Date &amp; location ↓</a>
   </div>
 </section>
 
-<!-- PAGE 3: DATE, TIME & VENUE -->
-<section class="details" id="venue">
+<!-- PAGE 2: THANK YOU MESSAGE -->
+<section class="thankyou" id="thanks">
+
+  <div class="petal-layer" id="petalLayer"></div>
+
+  <div class="inner thank-card">
+
+    <div class="eyebrow">With Hearts Full of Gratitude</div>
+
+    <div class="flower">♡</div>
+
+    <h2 class="script">Thank You!</h2>
+
+    <p class="message">
+      Our engagement celebration became even more
+      beautiful because of you.
+      <br><br>
+
+      Thank you for taking the time to be with us
+      and showering us with your love, blessings,
+      and warm wishes.
+      <br><br>
+
+      Your presence made our special day truly
+      unforgettable. Every smile, every blessing,
+      and every moment shared will always remain
+      close to our hearts.
+      <br><br>
+
+      We are truly blessed to have you in our lives.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="names">
+      ASHWIN <span class="ampersand">&amp;</span> PRAGATI
+    </div>
+
+    <p>Forever grateful for your love. ♡</p>
+
+    <a class="scroll-link" href="#memories">
+      Relive Our Memories ↓
+    </a>
+
+  </div>
+</section>
+
+<!-- PAGE 3: MEMORIES -->
+<section class="memories" id="memories">
+
   <div class="inner">
-    <div class="eyebrow">Please join our celebration</div>
-    <h2>When &amp; Where</h2>
+
+    <div class="eyebrow">Moments to Remember</div>
+
+    <h2 class="script">Beautiful Memories</h2>
+
     <div class="flower">❀</div>
 
-    <div class="detail-grid">
+    <p>
+      A few beautiful moments from a day
+      we will cherish forever.
+    </p>
 
-      <!-- DATE -->
-      <div class="detail-card">
-        <div class="symbol">▦</div>
-        <h3>The Date</h3>
-        <p id="venueDate" class="detail-value">15 November 2026</p>
-      </div>
+    <div class="gallery">
 
-      <!-- TIME -->
-      <div class="detail-card">
-        <div class="symbol">◷</div>
-        <h3>The Time</h3>
-        <p>Engagement Ceremony</p>
-        <p class="detail-value">11:00 AM onwards</p>
-      </div>
+      <!-- Replace these image paths with your photos -->
+      <img src="photo1.jpg" alt="Engagement memory 1">
 
-      <!-- VENUE -->
-      <div class="detail-card" style="grid-column:1 / -1">
-        <div class="symbol">⌖</div>
-        <h3>The Venue</h3>
-        <p class="venue-name">Vinkar Sabhagruh, Satara Road</p>
-        <p class="venue-location">Pune, Maharashtra, India</p>
-      </div>
+      <img src="photo2.jpg" alt="Engagement memory 2">
+
+      <img src="photo3.jpg" alt="Engagement memory 3">
+
+      <img src="photo4.jpg" alt="Engagement memory 4">
 
     </div>
 
-    <a class="button"
-       href="https://maps.app.goo.gl/pHftDb2nY7HfGr8H9"
-       target="_blank"
-       rel="noopener noreferrer">
-      OPEN LOCATION IN GOOGLE MAPS ↗
-    </a>
+    <div class="divider"></div>
 
-    <p style="margin-top:25px">
-      We can't wait to celebrate this special moment with you.
+    <p>
+      Some moments become memories,
+      and some memories become forever. ♡
     </p>
 
-    <a class="scroll-link" href="#thanks">A message for you ↓</a>
+    <a class="scroll-link" href="#family">
+      A Message From Our Family ↓
+    </a>
+
   </div>
 </section>
 
-<!-- PAGE 4: THANK YOU -->
-<section class="thanks" id="thanks">
+<!-- PAGE 4: FAMILY THANK YOU -->
+<section class="family" id="family">
+
   <div class="inner">
-    <div class="eyebrow">With heartfelt gratitude</div>
-    <h2 class="script">Thank You</h2>
+
+    <div class="eyebrow">With Love &amp; Gratitude</div>
+
+    <h2 class="script">Thank You So Much</h2>
+
     <div class="flower">♡</div>
 
     <p class="message">
-      Thank you for being part of our happiness.
-      Your love, blessings, and presence mean so much to us.
-      We look forward to celebrating this beautiful new
-      beginning with you.
+      A heartfelt thank you to all our family members,
+      relatives, friends, and well-wishers.
+
+      <br><br>
+
+      Your presence, blessings, support, and affection
+      made this celebration truly special.
+
+      <br><br>
+
+      We feel fortunate to have shared this beautiful
+      occasion with all of you.
+
+      <br><br>
+
+      Thank you for making our happiness even greater.
     </p>
 
     <div class="divider"></div>
@@ -642,88 +535,66 @@ p {
       Ashwin &amp; Pragati
     </div>
 
-    <p>Two hearts. One forever. ♡</p>
-
     <p class="family-regards">Regards,</p>
-    <div class="family-signoff" aria-label="Priya &amp; Avdhut Ghogale Family">
-      Priya <span class="normal-ampersand">&amp;</span> Avdhut<br>Ghogale Family
+
+    <div class="family-signoff">
+      Priya &amp; Avdhut<br>
+      Ghogale Family
     </div>
-    <p style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#76515c; letter-spacing:2px; text-transform:uppercase;">
-      With love &amp; blessings
+
+    <p style="font-family:'Cormorant Garamond',serif;
+      font-size:19px; letter-spacing:2px;">
+      WITH LOVE &amp; BLESSINGS
     </p>
 
-    <a class="scroll-link" href="#home">↑ Back to the beginning</a>
+    <div class="flower">♡</div>
+
+    <a class="scroll-link" href="#home">
+      ↑ Back to the Beginning
+    </a>
+
   </div>
 </section>
 
 <script>
-// ENGAGEMENT DATE AND TIME
-const engagementDate = new Date("2026-11-15T11:30:00");
 
-function formatDate(date) {
-  return date.toLocaleDateString("en-IN", {
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  });
-}
-
-const formattedDate = formatDate(engagementDate);
-
-document.getElementById("heroDate").textContent =
-  "15th NOVEMBER 2026";
-
-document.getElementById("inviteDate").textContent =
-  formattedDate.toUpperCase();
-
-document.getElementById("venueDate").textContent =
-  formattedDate;
-
-function updateCountdown() {
-  const now = new Date();
-  const difference = engagementDate.getTime() - now.getTime();
-
-  if (difference <= 0) {
-    document.getElementById("countdown").innerHTML =
-      "<p>Our special day is here! ♡</p>";
-    return;
-  }
-
-  const days = Math.floor(difference / 86400000);
-  const hours = Math.floor((difference / 3600000) % 24);
-  const minutes = Math.floor((difference / 60000) % 60);
-  const seconds = Math.floor((difference / 1000) % 60);
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent =
-    String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent =
-    String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent =
-    String(seconds).padStart(2, "0");
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
-
-// FALLING PETALS ON THE INVITATION PAGE ONLY
+// FALLING PETALS
 const petalLayer = document.getElementById("petalLayer");
-const petalCount = 28;
 
-for (let i = 0; i < petalCount; i++) {
+for (let i = 0; i < 28; i++) {
+
   const petal = document.createElement("span");
+
   petal.className = "petal";
-  petal.style.left = `${Math.random() * 100}%`;
-  petal.style.setProperty("--petal-size", `${8 + Math.random() * 10}px`);
-  petal.style.setProperty("--petal-opacity", `${0.35 + Math.random() * 0.5}`);
-  petal.style.setProperty("--fall-duration", `${7 + Math.random() * 8}s`);
-  petal.style.setProperty("--fall-delay", `${-Math.random() * 15}s`);
-  petal.style.setProperty("--start-rotation", `${Math.random() * 360}deg`);
+
+  petal.style.left = Math.random() * 100 + "%";
+
+  petal.style.setProperty(
+    "--petal-size",
+    (8 + Math.random() * 10) + "px"
+  );
+
+  petal.style.setProperty(
+    "--petal-opacity",
+    0.35 + Math.random() * 0.5
+  );
+
+  petal.style.setProperty(
+    "--fall-duration",
+    (7 + Math.random() * 8) + "s"
+  );
+
+  petal.style.setProperty(
+    "--fall-delay",
+    (-Math.random() * 15) + "s"
+  );
+
   petalLayer.appendChild(petal);
 }
 
 // BACKGROUND MUSIC
 const music = document.getElementById("bgMusic");
+
 const musicButton = document.getElementById("musicButton");
 
 function updateMusicButton() {
@@ -742,21 +613,25 @@ async function playMusic() {
 }
 
 musicButton.addEventListener("click", async () => {
+
   if (music.paused) {
     await playMusic();
   } else {
     music.pause();
     updateMusicButton();
   }
+
 });
 
 music.addEventListener("play", updateMusicButton);
+
 music.addEventListener("pause", updateMusicButton);
 
-// Browsers may block autoplay until the visitor interacts.
+// TRY AUTOPLAY
 window.addEventListener("load", () => {
   playMusic();
 });
+
 </script>
 
 </body>
